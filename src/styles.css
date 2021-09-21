@@ -29,13 +29,13 @@ tr:nth-child(even) {
 #menu-table {
   text-align: left;
   background-color: #f2f2f2;
-  padding: 2px 0 2px 0;
   width: 100%;
 }
 
 th {
   background-color: black;
   color: white;
+  padding: 2px;
   font-family: fantasy;
 }
 /*Week 2 Exercise 1 ends*/
