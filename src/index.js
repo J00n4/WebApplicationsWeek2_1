@@ -16,7 +16,7 @@ if (document.readyState !== "loading") {
 }
 
 function initializeCode() {
-  const addCommentButton = document.getElementById("add-comment");
+  const addCommentButton = document.getElementById("add-text");
 
   addCommentButton.addEventListener("click", function () {
     const commentsList = document.getElementById("comments-list");
@@ -129,7 +129,7 @@ if (document.readyState !== "loading") {
 }
 
 function addRating() {
-  const addRatingButton = document.getElementById("add-text");
+  const addRatingButton = document.getElementById("add-comment");
 
   addRatingButton.addEventListener("click", function () {
     const ratingsList = document.getElementById("ratings-list");
