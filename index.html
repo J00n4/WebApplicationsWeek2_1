@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="menu-layout">
+      <div id="app"></div>
+      <p>Exercise 1:</p>
+      <h1>Hello World!</h1>
+
+      <p class="header">Exercise 2:</p>
+      <table id="menu-table">
+        <tbody>
+          <tr id="table-header">
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Chips</td>
+            <td>6,99€</td>
+          </tr>
+          <tr>
+            <td>Pork Chops</td>
+            <td>14,89€</td>
+          </tr>
+          <tr>
+            <td>Entrecote</td>
+            <td>29,99€</td>
+          </tr>
+          <tr>
+            <td>Caesar Salad</td>
+            <td>10,50€</td>
+          </tr>
+          <tr>
+            <td>Pasta</td>
+            <td>13,75€</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="header">Exercise 3:</p>
+      <ul>
+        <li id="comments-list"></li>
+      </ul>
+
+      <button id="add-comment">Add comment</button>
+
+      <p class="header">Exercise 4:</p>
+      <ul>
+        <li id="comments" class="comments"></li>
+      </ul>
+
+      <textarea id="big-text" cols="20" rows="10"></textarea>
+      <div>
+        <label for="rating-menu">Choose rating:</label>
+        <select name="rating-menu" id="rating-menu">
+          <option value="Great">Great</option>
+          <option value="Good">Good</option>
+          <option value="Okay">Okay</option>
+          <option value="Bad">Bad</option>
+        </select>
+        <button id="add-text">Add comment</button>
+      </div>
+      <div id="ratings-list" class="comment">
+        <p class="comment-rating"></p>
+        <p class="comment-text"></p>
+
+        <button id="remove-comment">Remove comment</button>
+      </div>
+      <p>Exercise 5:</p>
+
+      <p id="output"></p>
+      <button id="remove-comments">Remove comments</button>
+
+      <script src="src/index.js"></script>
+    </div>
+  </body>
+</html>

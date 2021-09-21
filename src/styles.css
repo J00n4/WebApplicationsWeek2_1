@@ -1,0 +1,41 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+/*Week 2 Exercise 1 starts*/
+body {
+  font-family: Garamond;
+}
+
+.header {
+  font-style: italic;
+}
+
+/*Week 2 Exercise 3 starts*/
+.menu-layout {
+  text-align: center;
+  max-width: 740px;
+  margin: auto;
+}
+/*Week 2 Exercise 3 ends (1 addition in #menu-table)*/
+
+/*Week 2 Exercise 2 starts*/
+tr:nth-child(even) {
+  background-color: gainsboro;
+}
+
+#menu-table {
+  text-align: left;
+  background-color: #f2f2f2;
+  padding: 2px 0 2px 0;
+  width: 100%;
+}
+
+#table-header {
+  background-color: black;
+  color: white;
+}
+/*Week 2 Exercise 1 ends*/
+/*Week 2 Exercise 2 ends*/
