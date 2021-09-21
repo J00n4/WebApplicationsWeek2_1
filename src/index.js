@@ -144,8 +144,7 @@ function addRating() {
     rat.innerHTML = document.getElementById("rating-menu").options[
       document.getElementById("rating-menu").selectedIndex
     ].text;
-    com.append(document.getElementById("big-text").value);
-    console.log(com);
+    com.innerHTML = document.getElementById("big-text").value;
     newRat.appendChild(rat);
     newRat.appendChild(com);
     ratingsList.appendChild(newRat);
