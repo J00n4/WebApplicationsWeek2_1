@@ -142,7 +142,9 @@ function addRating() {
     rat.className = "comment-rating";
     com.className = "comment-text";
     rat.append(
-      document.createTextNode(document.getElementById("rating-menu").value)
+      document.getElementById("rating-menu").options[
+        document.getElementById("rating-menu").selectedIndex
+      ].text
     );
     console.log(rat);
     com.append(
