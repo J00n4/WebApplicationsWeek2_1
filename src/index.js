@@ -146,9 +146,7 @@ function addRating() {
         document.getElementById("rating-menu").selectedIndex
       ].text
     );
-    com.append(
-      document.createTextNode(document.getElementById("big-text").value)
-    );
+    com.append(document.getElementById("big-text").value);
     newRat.appendChild(rat);
     newRat.appendChild(com);
     ratingsList.appendChild(newRat);
