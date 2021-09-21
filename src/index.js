@@ -135,9 +135,9 @@ function addRating() {
     const ratingsList = document.getElementById("ratings-list");
     console.log("working!");
 
-    const newRat = document.createElement("div");
-    const rat = document.createElement("p");
-    const com = document.createElement("p");
+    let newRat = document.createElement("div");
+    let rat = document.createElement("p");
+    let com = document.createElement("p");
     newRat.className = "comment";
     rat.className = "comment-rating";
     com.className = "comment-text";
