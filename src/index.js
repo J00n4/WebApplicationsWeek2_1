@@ -31,7 +31,7 @@ function initializeCode() {
 // Exercise 3 ends
 
 // Exercise 4 starts
-if (document.readyState !== "loading") {
+/*if (document.readyState !== "loading") {
   console.log("Document is ready");
   addToComments();
 } else {
@@ -62,7 +62,7 @@ function addToComments() {
       document.getElementsByClassName("remove-comment").style = "block";
     }
   });
-}
+}*/
 // Exercise 4 ends
 
 // Exercise 5 starts
