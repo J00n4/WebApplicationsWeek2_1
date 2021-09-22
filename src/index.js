@@ -65,58 +65,7 @@ function addToComments() {
 }*/
 // Exercise 4 ends
 
-// Exercise 5 starts
-if (document.readyState !== "loading") {
-  console.log("Document is ready");
-  removeComments();
-} else {
-  document.addEventListener("DOMContentLoaded", function () {
-    console.log("Document ready after waiting");
-    removeComments();
-  });
-}
-
-function removeComments() {
-  const removeCommentsButton = document.getElementById("remove-comments");
-  removeCommentsButton.addEventListener("click", function () {
-    const removeButton = document.getElementById("remove-comment");
-
-    removeButton.addEventListener("click", function () {
-      var response = confirm(
-        "Are you sure that you want to delete all list items?"
-      );
-      if (response === true) {
-        document.getElementById("comments-list").innerHTML = "";
-        document.getElementById("comments").innerHTML = "";
-      } else {
-        document.getElementById("output").innerHTML = "You canceled.";
-      }
-    });
-  });
-}
-// Exercise 5 ends
-
 // Week 2 Exercise 4 starts
-/*function Rating() {
-  var newRat = document.createElement("div");
-  var rat = document.createElement("p");
-  var com = document.createElement("p");
-  //newRat.setAttribute("class", "comment");
-  //rat.setAttribute("class", "comment-rating");
-  //com.setAttribute("class", "comment-text");
-  rat.append(
-    document.createTextNode(document.getElementById("rating-menu").value)
-  );
-  console.log(rat);
-  com.append(
-    document.createTextNode(document.getElementById("big-text").value)
-  );
-  newRat.appendChild(rat);
-  newRat.appendChild(com);
-  console.log(newRat);
-  //this.rating = "No rating";
-  //this.comment = "No comment";
-}*/
 
 if (document.readyState !== "loading") {
   console.log("Document is ready");
@@ -138,6 +87,10 @@ function addRating() {
     let newRat = document.createElement("div");
     let rat = document.createElement("p");
     let com = document.createElement("p");
+    let rmvbtn = document.createElement("button");
+    rmvbtn.className = "remove-comment";
+    rmvbtn.visibility = "hidden";
+    rmvbtn.innerHTML = "Delete this comment";
     newRat.className = "comment";
     rat.className = "comment-rating";
     com.className = "comment-text";
@@ -147,7 +100,27 @@ function addRating() {
     com.innerHTML = document.getElementById("big-text").value;
     newRat.appendChild(rat);
     newRat.appendChild(com);
+    newRat.appendChild(rmvbtn);
     ratingsList.appendChild(newRat);
+
+    //const removeButton = document.getElementById("remove-comment");
+    rmvbtn.onclick = function () {
+      newRat.remove();
+    };
+    /*
+    rmvbtn.addEventListener("click", function () {
+      var response = confirm(
+        "Are you sure that you want to delete this list item?"
+      );
+      if (response === true) {
+        var item = document.getElementsByClassName("comment");
+        item.remove();
+        //item.parentNode.removeChild(item);
+      } else {
+        document.getElementById("output").innerHTML = "You canceled.";
+      }
+    });*/
+
     /*var newParagraph3 = new Rating();
     console.log(newParagraph3.newRat);
     ratingsList.append(newParagraph3.newRat);*/
@@ -166,3 +139,57 @@ function addRating() {
   });
 }
 // Week 2 Exercise 4 ends
+
+if (document.readyState !== "loading") {
+  console.log("Document is ready");
+  removeComments();
+} else {
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("Document ready after waiting");
+    removeComments();
+  });
+}
+
+function removeComments() {
+  // Week 2 exercise 5 starts
+  const removeCommentsButton = document.getElementById("remove-comments");
+  removeCommentsButton.addEventListener("click", function () {
+    var changeBtn = document.getElementsByClassName("remove-comment");
+    for (var x = 0; x < changeBtn.length; x++) {
+      changeBtn[x].style.visibility = "visible";
+    }
+    /*var editON = true;
+    if (editON === true) {
+      if (changeBtn) {
+        for (var x = 0; x < changeBtn.length; x++) {
+          changeBtn[x].style.visibility = "block";
+        }
+      }
+    } else {
+      if (changeBtn) {
+        for (var x = 0; x < changeBtn.length; x++) {
+          changeBtn[x].style.visibility = "none";
+        }
+      }
+    }*/
+  });
+
+  // Week 2 exercise 5 ends
+
+  /*const removeCommentsButton = document.getElementById("remove-comments");
+  removeCommentsButton.addEventListener("click", function () {
+    const removeButton = document.getElementById("remove-comment");
+
+    removeButton.addEventListener("click", function () {
+      var response = confirm(
+        "Are you sure that you want to delete all list items?"
+      );
+      if (response === true) {
+        document.getElementById("comments-list").innerHTML = "";
+        document.getElementById("comments").innerHTML = "";
+      } else {
+        document.getElementById("output").innerHTML = "You canceled.";
+      }
+    });
+  });*/
+}
